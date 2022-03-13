@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head style="color:grey">
+    <title>MeteoTomsk</title>
+    <meta charset="UTF-8">
+    {%  load staticfiles %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href ="{% static 'css/bootstrap.min.css' %}" type="type/css">
+   <div class="radius" style="height: 60px; weight:100%; margin-bottom:3px; border-radius:8px">
+       <a href="http://127.0.0.1:8000/" style="text-decoration: none;"><div  class="title" style="">MeteoTomsk</div></a>
+   </div>
+</head>
+<body style="background: #EBEDEE; <!--url({% static 'img/world.jpg' %}); background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;-->" >
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+{% block content %}
+{% endblock content %}
+<script language="javascript" type="text/javascript">
+<!--
+var d = new Date();
+month = d.getMonth() + 1
+if (month<=9) month= "0" + month;
+var date = d.getFullYear() + "-" + month + "-" + d.getDate();
+document.getElementById("dated").setAttribute('value',date);
+document.getElementById("dated").setAttribute('max',date);
+document.getElementById("dated1").setAttribute('value',date);
+document.getElementById("dated1").setAttribute('max',date);
+//--></script>
+</body>
+</html>

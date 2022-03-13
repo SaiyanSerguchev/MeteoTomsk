@@ -1,0 +1,18 @@
+{% extends 'static/base.html' %}
+{% load static %}
+{% block content %}
+ <div class="topnav">
+  <a  href="{% url 'landing' %}">Температура воздуха</a>
+  <a  href="{% url 'news' %}">Обновления</a>
+  <a  href="{% url 'contacts' %}">Контакты</a>
+  <a class="active" href="{% url 'aboutus' %}">О нас</a>
+</div>
+<div class="h1" >
+        <text style="font-size: 19px;">
+            О нас:
+            <br>ТУСУР</text>
+</div>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" integrity="2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js" integrity="VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU" crossorigin="anonymous"></script>
+{% endblock %}

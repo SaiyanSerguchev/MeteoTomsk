@@ -1,0 +1,38 @@
+{% extends 'static/base.html' %}
+{% load static %}
+{% block content %}
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" integrity="2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js" integrity="VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU" crossorigin="anonymous"></script>
+<div class="topnav">
+  <a  class="active" href="{% url 'landing' %}">Температура воздуха</a>
+  <a  href="{% url 'news' %}">Обновления</a>
+  <a  href="{% url 'contacts' %}">Контакты</a>
+  <a href="{% url 'aboutus' %}">О нас</a>
+</div>
+<div class="container">
+    <div class="span9">
+        <img src= {% static "img/overlay.png" %}>
+    <div class="p2">
+        <img src={% static "img/Scale_photo-resizer.ru.png" %}>
+    </div>
+    </div>
+    <div class="span3">
+        <div style="position:relative;top:-570px;right:-550px; font-size:40px;">
+            Тип данных:
+        </div>
+        <div style="position:relative;top:-570px;right:-550px;font-size:30px;">
+            <a  class="btn btn-secondary btn-lg" href="{% url 'landing' %}">Точка</a>
+            <a  class="btn btn-secondary btn-lg active" href="{% url 'graph' %}">График</a>
+        </div>
+    <div class="p3" style="height:555px; width:670px; background-color:darkgrey;" >
+        <img src= {% static "img/pic_dmm.png" %}>
+        <div style="margin-top:5px;">
+            <a  class="btn btn-secondary btn-lg" href="{% url 'graph' %}">Назад</a>
+            <a class="btn btn-secondary btn-lg" href="{% static "img/pic_dmm.png" %}" download>Скачать диаграмму</a>
+        </div>
+    </div>
+    </div>
+</div>
+
+{% endblock %}
